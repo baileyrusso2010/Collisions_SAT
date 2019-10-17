@@ -5,41 +5,25 @@ using UnityEngine;
 public class Collision : MonoBehaviour
 {
 
-    public Polygon[] objs;
+    //public Polygon[] objs;
 
-    //public Polygon obj1, obj2;
+    public Polygon obj1, obj2;
 
     //public Sphere sp;
 
     void Update()
     {
 
-        //if (isColliding())
-        //{
-        //    ElasticCollision();
-        //    AngularRotation();
+    
 
-        //}
-
-
-            //obj1.transform.Rotate(new Vector3(0, 0, 2));
-
-        for (int i = 0; i < 3; i++)
+                
+	if (SAT(obj1, obj2))
         {
-
-                if (SAT(objs[i], objs[2a]) && objs[i] != objs[2])
-                {
-                    Debug.Log("SOmehing");
-                    ElasticCollision(objs[i], objs[2]);
-                }
-
+        
+        	ElasticCollision(obj1, obj2);
         }
 
-        //if (polyCircle(obj1.childrenPosition,sp.position.x, sp.position.y,sp.radius))
-        //{
-        //    Debug.Log("Holy shit it works");
-        //}
-
+        }
 
     }
 
